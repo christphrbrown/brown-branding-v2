@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard — Brown Branding</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">Brown Branding</div>
+        <ul class="nav">
+            <li><a href="dashboard_client.html" class="active">Dashboard</a></li>
+        </ul>
+        <div class="logout">
+            <span id="userInfo"></span>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </aside>
+    <main class="main-content">
+        <header class="header">
+            <h2>Client Dashboard</h2>
+        </header>
+        <div class="content">
+            <section>
+                <h3>Your Videos</h3>
+                <div id="videoGrid" class="grid grid-3"></div>
+            </section>
+            <section>
+                <h3>Your Progress</h3>
+                <div id="progressList" class="progress-list"></div>
+            </section>
+            <section>
+                <h3>Available Services</h3>
+                <div id="productGrid" class="grid grid-3"></div>
+            </section>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            renderClientPage();
+        });
+    </script>
+</body>
+</html>
