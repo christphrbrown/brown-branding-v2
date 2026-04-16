@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Manager Dashboard — Brown Branding</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">Brown Branding</div>
+        <ul class="nav">
+            <li><a href="dashboard_manager.html" class="active">Dashboard</a></li>
+        </ul>
+        <div class="logout">
+            <span id="userInfo"></span>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </aside>
+    <main class="main-content">
+        <header class="header">
+            <h2>Market Manager Dashboard</h2>
+        </header>
+        <div class="content">
+            <section>
+                <h3>Assigned Clients</h3>
+                <ul id="clientList"></ul>
+            </section>
+            <section>
+                <h3>Send Update</h3>
+                <form id="updateForm" class="form-grid">
+                    <select id="updateClient" required></select>
+                    <textarea id="updateMessage" placeholder="Message" rows="3" required></textarea>
+                    <button type="submit">Send Update</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            renderManagerPage();
+        });
+    </script>
+</body>
+</html>
