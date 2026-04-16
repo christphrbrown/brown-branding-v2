@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard — Brown Branding</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">Brown Branding</div>
+        <ul class="nav">
+            <li><a href="dashboard_owner.html" class="active">Dashboard</a></li>
+        </ul>
+        <div class="logout">
+            <span id="userInfo"></span>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </aside>
+    <main class="main-content">
+        <header class="header">
+            <h2>Owner Dashboard</h2>
+        </header>
+        <div class="content">
+            <section>
+                <h3>Your Videos</h3>
+                <div id="ownerVideoGrid" class="grid grid-3"></div>
+            </section>
+            <section>
+                <h3>Upload New Video</h3>
+                <form id="uploadForm" class="form-grid">
+                    <input type="text" placeholder="Video Title" required>
+                    <textarea placeholder="Video Description" rows="3" required></textarea>
+                    <input type="file" accept="video/*">
+                    <button type="submit">Upload</button>
+                </form>
+            </section>
+            <section>
+                <h3>Your Products</h3>
+                <div id="ownerProductGrid" class="grid grid-3"></div>
+            </section>
+            <section>
+                <h3>Create Product</h3>
+                <form id="productForm" class="form-grid">
+                    <input type="text" placeholder="Product Name" required>
+                    <textarea placeholder="Product Description" rows="3" required></textarea>
+                    <input type="number" step="0.01" placeholder="Price" required>
+                    <button type="submit">Create</button>
+                </form>
+            </section>
+            <section>
+                <h3>Assign Video to Client</h3>
+                <form id="assignForm" class="form-grid">
+                    <select id="assignSelectVideo" required></select>
+                    <select id="assignSelectClient" required></select>
+                    <button type="submit">Assign</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            renderOwnerPage();
+        });
+    </script>
+</body>
+</html>
